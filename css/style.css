@@ -18,63 +18,71 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .main-site {
     background-color: var(--main-color);
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto auto auto 1fr auto auto;
-    grid-template-areas:
-    "header-container header-container header-container"
-    "nav-container nav-container nav-container"
-    "section-container section-container aside-container"
-    "article-container article-container aside-container"
-    "footer-container footer-container footer-container";
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 100vw;
 }
 
 .container {
     background-color: var(--container-color);
-    padding: 5vh;
+    padding: 2vh;
+    gap: 1vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 5fr 10fr 10fr 5fr;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "section section aside"
+    "article article aside"
+    "footer footer footer";
+    width: 50vw;
+    height: 60vh;
 }
 
-.header-container {
+.header {
     background-color: var(--header-color);
-    grid-area: header-container;
+    grid-area: header;
     text-align: center;
+    /* padding: 1vh; */
 }
 
-.nav-container {
+.nav {
     background-color: var(--nav-color);
-    grid-area: nav-container;
+    grid-area: nav;
     text-align: center;
+    /* padding: 1vh; */
 }
 
-.section-container {
+.section {
     background-color: var(--section-color);
-    grid-area: section-container;
+    grid-area: section;
     text-align: center;
+    /* padding: 1vh; */
 }
 
-.article-container {
+.article {
     background-color: var(--article-color);
-    grid-area: article-container;
+    grid-area: article;
     text-align: center;
+    /* padding: 1vh; */
 }
 
-.aside-container {
+.aside {
     background-color: var(--aside-color);
-    grid-area: aside-container;
+    grid-area: aside;
     text-align: center;
+    /* padding: 1vh; */
 }
 
-.footer-container {
+.footer {
     background-color: var(--footer-color);
-    grid-area: footer-container;
+    grid-area: footer;
     text-align: center;
+    /* padding: 1vh; */
 }
