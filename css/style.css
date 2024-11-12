@@ -1,0 +1,80 @@
+:root{
+    --main-color: #f4f4f4;
+    --container-color: Black;
+    --header-color: #3550ca;
+    --nav-color: #2a8a85;
+    --section-color: #e9ca1e;
+    --article-color: #e47245;
+    --aside-color: #f4f4f4;
+    --footer-color: #3550ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-site {
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto 1fr auto auto;
+    grid-template-areas:
+    "header-container header-container header-container"
+    "nav-container nav-container nav-container"
+    "section-container section-container aside-container"
+    "article-container article-container aside-container"
+    "footer-container footer-container footer-container";
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: var(--container-color);
+    padding: 5vh;
+}
+
+.header-container {
+    background-color: var(--header-color);
+    grid-area: header-container;
+    text-align: center;
+}
+
+.nav-container {
+    background-color: var(--nav-color);
+    grid-area: nav-container;
+    text-align: center;
+}
+
+.section-container {
+    background-color: var(--section-color);
+    grid-area: section-container;
+    text-align: center;
+}
+
+.article-container {
+    background-color: var(--article-color);
+    grid-area: article-container;
+    text-align: center;
+}
+
+.aside-container {
+    background-color: var(--aside-color);
+    grid-area: aside-container;
+    text-align: center;
+}
+
+.footer-container {
+    background-color: var(--footer-color);
+    grid-area: footer-container;
+    text-align: center;
+}
