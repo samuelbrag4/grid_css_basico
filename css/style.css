@@ -86,3 +86,17 @@ body {
     text-align: center;
     /* padding: 1vh; */
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "section"
+            "article"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+}
